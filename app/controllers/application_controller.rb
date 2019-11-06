@@ -1,3 +1,6 @@
 class ApplicationController < ActionController::Base
-  # protect_from_forgery with: :null_session
+  def all_products_method
+    @products = Product.new
+    render "products.json.jb"
+  end
 end

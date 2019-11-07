@@ -1,8 +1,7 @@
-result = []
-index = 0
-while index < @products.length
-  result << { id: @products[index].id, name: @products[index].id, price: @products[index].id, image_url: @products[index].id, description: @products[index].id }
-  index = index + 1
-end
-
-return result
+{
+  id: @product.id,
+  name: @product.name,
+  price: @product.price,
+  image_url: @product.image_url,
+  description: @product.description,
+}

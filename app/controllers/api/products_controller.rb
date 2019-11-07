@@ -9,8 +9,8 @@ class Api::ProductsController < ApplicationController
     render "first_product.json.jb"
   end
 
-  def second_product_method
-    @product = Product.second
-    render "second_product.json.jb"
+  def last_product_method
+    @product = Product.last
+    render "last_product.json.jb"
   end
 end

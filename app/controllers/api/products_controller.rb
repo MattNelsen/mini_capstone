@@ -13,4 +13,9 @@ class Api::ProductsController < ApplicationController
     @product = Product.last
     render "last_product.json.jb"
   end
+
+  def any_product_method
+    @product = Product.find_by(id: input_id)
+    render "any_product.json.jb"
+  end
 end

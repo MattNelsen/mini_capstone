@@ -1,4 +1,0 @@
-{
-  message: "yo",
-  everything: @products,
-}

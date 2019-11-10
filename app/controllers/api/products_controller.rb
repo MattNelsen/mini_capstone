@@ -5,14 +5,14 @@ class Api::ProductsController < ApplicationController
   end
 
   def create
-    @products = Product.new(
+    @product = Product.new(
       name: params[:input_name],
       price: params[:input_price],
       image_url: params[:input_image_url],
       description: params[:input_description],
     )
 
-    @products.save
+    @product.save
     render "show.json.jb"
   end
 
@@ -23,10 +23,10 @@ class Api::ProductsController < ApplicationController
 
   def update
     @product = Product.find_by(id: params[:id])
-    @product.name = params[:input_name] || @product.name
-    @product.price = params[:input_price] || @product.price
-    @product.image_url = params[:input_image_url] || @product.image_url
-    @product.description = params[:input_description] || @product.description
+    @product.name = params[:name] || @product.name
+    @product.price = params[:price] || @product.price
+    @product.image_url = params[:image_url] || @product.image_url
+    @product.description = params[:description] || @product.description
     @product.save
     render "show.json.jb"
   end

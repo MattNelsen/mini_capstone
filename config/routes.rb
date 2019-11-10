@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     patch "/products/:id" => "products#update"
     get "first_product_url" => "products#first_product_method"
     get "last_product_url" => "products#last_product_method"
+    delete "/products/:id" => "products#destroy"
   end
 end

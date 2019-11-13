@@ -27,6 +27,7 @@ class Api::ProductsController < ApplicationController
     @product.price = params[:price] || @product.price
     @product.image_url = params[:image_url] || @product.image_url
     @product.description = params[:description] || @product.description
+    @product.InStockorOutofStock, = params[:InStockorOutofStock] || @product.InStockorOutofStock,
     @product.save
     render "show.json.jb"
   end

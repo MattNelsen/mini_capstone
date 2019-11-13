@@ -12,8 +12,11 @@ class Api::ProductsController < ApplicationController
       description: params[:input_description],
     )
 
-    @product.save
-    render "show.json.jb"
+    if @product.save
+      render "show.json.jb"
+    else
+      render json: { errors: @product.errors.full_messages }
+    end
   end
 
   def show

@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   validates :price, presence: true
-  vslidates :price, numericality: { greater_than: 0 }
+  validates :price, numericality: { greater_than: 0 }
   validates :name, presence: true
   validates :description, presence: true
   validates :description, length: { in: 3..75 }

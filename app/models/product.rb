@@ -12,7 +12,7 @@ class Product < ApplicationRecord
   end
 
   def total
-    price * 1.09
+    price + tax
   end
 
   p tax(price)

@@ -4,7 +4,7 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :description, length: { in: 3..75 }
-  validates :image, presence: true
+  validates :image_url, presence: true
 
   def is_discounted?
     if price < 10
@@ -21,6 +21,4 @@ class Product < ApplicationRecord
   def total
     price + tax
   end
-
-  p tax(price)
 end

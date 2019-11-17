@@ -7,7 +7,7 @@ class Api::ProductsController < ApplicationController
     end
 
     if params[:discount]
-      @products = products.where("price < 10")
+      @product = products.where("price < 10")
     end
 
     if params[:sort] == "price" && params[:sort_order] == "asc"
@@ -25,10 +25,10 @@ class Api::ProductsController < ApplicationController
 
   def create
     @product = Product.new(
-      name: params[:input_name],
-      price: params[:input_price],
-      image_url: params[:input_image_url],
-      description: params[:input_description],
+      name: params[:name],
+      price: params[:price],
+      image_url: params[:image_url],
+      description: params[:description],
     )
     if @product.save
       render "show.json.jb"

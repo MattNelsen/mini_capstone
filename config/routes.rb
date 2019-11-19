@@ -15,5 +15,6 @@ Rails.application.routes.draw do
     get "first_product_url" => "products#first_product_method"
     get "last_product_url" => "products#last_product_method"
     delete "/products/:id" => "products#destroy"
+    post "/users" => "users#create"
   end
 end

@@ -4,7 +4,6 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true
   validates :description, length: { in: 3..75 }
-  validates :image_url, presence: true
 
   belongs_to :supplier
 

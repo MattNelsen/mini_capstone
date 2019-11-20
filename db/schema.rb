@@ -33,15 +33,13 @@ ActiveRecord::Schema.define(version: 2019_11_20_015505) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "products", id: false, force: :cascade do |t|
+  create_table "products", force: :cascade do |t|
     t.string "name"
-    t.decimal "price", precision: 5, scale: 2
+    t.decimal "price", precision: 9, scale: 2
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "InStockorOutofStock"
     t.integer "supplier_id"
-    t.integer "id"
   end
 
   create_table "suppliers", force: :cascade do |t|

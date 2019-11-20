@@ -4,7 +4,7 @@
     name: product.name,
     price: product.price,
     # image_url: product.image_url,
-    images: [],
+    images: product.images,
     description: product.description,
     supplier: product.supplier,
   }

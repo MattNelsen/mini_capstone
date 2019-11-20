@@ -1,9 +1,10 @@
-@products.each do |product|
+@products.map do |product|
   {
     id: product.id,
     name: product.name,
     price: product.price,
     # image_url: product.image_url,
+    images: [],
     description: product.description,
     supplier: product.supplier,
   }

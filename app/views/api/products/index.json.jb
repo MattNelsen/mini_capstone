@@ -5,7 +5,6 @@
     price: product.price,
     # image_url: product.image_url,
     description: product.description,
-    images: product.images,
     supplier: product.supplier,
   }
 end

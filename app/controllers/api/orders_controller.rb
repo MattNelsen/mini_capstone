@@ -1,4 +1,11 @@
 class Api::OrdersController < ApplicationController
+  before_action :authenticate_user
+
+  def show
+    @order = current_user.orders.find_by(id: params[:id])
+    render "show.json.jb"
+  end
+
   def index
     @orders = current_user.orders
     render "index.json.jb"

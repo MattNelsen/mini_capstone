@@ -1,6 +1,6 @@
 {
   id: @carted_product.id,
-  product: @carted_product.product,
+  product: @carted_products.product,
   quantity: @carted_product.quantity,
   status: @carted_product.status,
   order_id: @carted_product.order_id,

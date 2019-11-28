@@ -3,6 +3,7 @@
   <p>  Description: <%= @product.description %><p>
   <a href="/products/<%= @product.id %>/edit">Edit product</a>
 
-
-
-
+  <form method="post" action="/products/<%= @product.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Destroy product">
+  </form>

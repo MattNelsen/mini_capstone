@@ -28,4 +28,13 @@ class ProductsController < ApplicationController
     @product = Product.find_by(id: params[:id])
     render "edit.html.erb"
   end
+
+  def update
+    @product = Product.find_by(id: params[:id])
+    @product.name = params[:name]
+    @product.price = params[:price]
+    @product.description = params[:description]
+    @product.save
+    redirect_to "/products"
+  end
 end

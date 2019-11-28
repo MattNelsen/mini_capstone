@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
   validates :name, presence: true
   validates :description, presence: true
-  validates :description, length: { in: 3..75 }
+  validates :description, length: { in: 3..750 }
 
   belongs_to :supplier
 
